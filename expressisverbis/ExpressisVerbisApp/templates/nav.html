@@ -1,9 +1,18 @@
 {% load static %}
 <nav class="navbar">
-    <div class="nav_logo">
-        <img src="{% static 'graphics/logo.png' %}">
+    <div class="nav_logo_container">
+        <img src="{% static 'graphics/logo.png' %}" class="nav_logo">
     </div>
-    <div class="nav_container">
-
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
-</nav>
+  </nav>
