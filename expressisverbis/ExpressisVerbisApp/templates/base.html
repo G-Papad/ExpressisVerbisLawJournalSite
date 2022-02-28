@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Expressis Verbis Law Journal</title>
+    </head>
+
+    <body>
+        <header id="header">
+            {% include "nav.html" %}
+        </header>
+    
+        <main id="main">
+            {% block content %}{% endblock %}
+        </main>
+    
+        <footer id="footer">
+            {% include "footer.html" %}
+        </footer>
+    </body>
+
+</html>

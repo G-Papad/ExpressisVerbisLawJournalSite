@@ -1,5 +1,4 @@
 from django.shortcuts import render
-import stmplib
 
 # Create your views here.
 
