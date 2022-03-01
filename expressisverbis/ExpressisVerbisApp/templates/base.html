@@ -5,6 +5,7 @@
 <html>
     <head>
         <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'graphics/favicon.ico' %}">
     </head>
 
     <body>
@@ -12,13 +13,13 @@
             {% include "nav.html" %}
         </header>
 
-        <!-- <main id="main">
+        <main id="main">
             {% block content %}{% endblock %}
         </main>
 
         <footer id="footer">
             {% include "footer.html" %}
-        </footer> -->
+        </footer>
     </body>
 
 </html>
