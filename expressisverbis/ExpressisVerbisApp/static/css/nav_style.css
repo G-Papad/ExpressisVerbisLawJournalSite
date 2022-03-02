@@ -57,11 +57,12 @@ body {
 }
 
 .navbar-links li:hover {
-    background-color: black;
+    background-color: #555;
 }
 
 .navbar-links li a:hover{
     color: cornflowerblue;
+    background-color: #555;
 }
 
 .navbar-links li a.currentLink{
