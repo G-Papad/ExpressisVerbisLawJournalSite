@@ -14,6 +14,7 @@ body {
     align-items: center;
     background-color: #333;
     color: white;
+    min-height: 80px;
 }
 
 .brand-title {
@@ -23,8 +24,8 @@ body {
 
 
 .navbar .nav_logo_container{
-    width: 8rem;
-    height: 3rem;
+    width: 9rem;
+    height: 6rem;
 }
 
 .nav_logo_container .nav_logo{
@@ -52,6 +53,7 @@ body {
     text-decoration: none;
     color: white;
     padding: 1rem;
+    font-size: 1.4em;
 }
 
 .navbar-links li:hover {
@@ -76,7 +78,13 @@ body {
     border-radius: 10px;
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 900px){
+    .navbar-links ul li a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 650px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
