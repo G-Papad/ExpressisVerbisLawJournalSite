@@ -3,4 +3,15 @@
 {% block title %} Τεύχη | ExpressisVerbis {% endblock %}
 {%block content%}
 <p>Issues</p>
+{%csrf_token%}
+<div class="issues_container">
+  {% for issue in issues %}
+  <div class="issue">
+    <a href="/issues/{{issue.issueNumber}}"><img src="{% static '' %}" alt="cover {{issue.issueNumber}}" width=100% class='icon-style'></a>
+    <!-- το path που δινει το issue.cover ειναι λιγο προβληματικο -->
+  </div>
+  {% endfor %}
+</div>
+<!-- <iframe src="https://drive.google.com/file/d/1AaiYzVGQ2kAWdLd9QC_xzbLAAQT4aif-/preview" width="640" height="480" allow="download"></iframe> -->
+
 {% endblock %}
