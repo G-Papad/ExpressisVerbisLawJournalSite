@@ -2,13 +2,13 @@
 {% load static %}
 {% block title %} Τεύχη | ExpressisVerbis {% endblock %}
 {%block content%}
-<p>Issues</p>
 {%csrf_token%}
 <div class="issues_container">
   {% for issue in issues %}
   <div class="issue">
-    <a href="/issues/{{issue.issueNumber}}"><img src="{% static '' %}" alt="cover {{issue.issueNumber}}" width=100% class='icon-style'></a>
+    <a href="/issues/{{issue.issueNumber}}"><img src="{{ issue.cover.url}}" alt="cover {{issue.issueNumber}}" width=100% class='cover-photo'></a>
     <!-- το path που δινει το issue.cover ειναι λιγο προβληματικο -->
+    <p>Τεύχος {{issue.issueNumber}}</p>
   </div>
   {% endfor %}
 </div>

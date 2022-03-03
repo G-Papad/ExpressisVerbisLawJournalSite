@@ -1,8 +1,12 @@
+body{
+  min-height: 75vh;
+}
 .issues_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
+  min-height: 75vh;
 }
 
 .issue {
@@ -12,9 +16,20 @@
   margin-bottom: 1rem;
   height: 20rem;
   width: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
 }
 
 .issue:hover {
   background-color: #666;
   padding:2px;
+}
+
+.cover-photo{
+  object-fit: contain;
+  height: 15rem;
+  width: 15rem;
 }

@@ -6,7 +6,7 @@ from django.db import models
 class Issue(models.Model):
     issueNumber = models.IntegerField(unique=True)
     cover = models.ImageField(
-        upload_to='expressisverbis/ExpressisVerbisApp/static/covers/', default=None)
+        upload_to='covers/', default=None)
     publicationDate = models.DateTimeField()
     issueFile = models.FileField(upload_to='issue/')
 

@@ -1,6 +1,7 @@
 from . import views
 from django.urls import path, include
-from . import views
+from django.conf.urls.static import static
+from django.conf import settings
 # URLConfiguration
 
 urlpatterns = [
@@ -12,4 +13,4 @@ urlpatterns = [
     path('team', views.team, name='team'),
     path('sponsors', views.sponsors, name='sponsors'),
     path('announcements', views.announcements, name='announcements'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
