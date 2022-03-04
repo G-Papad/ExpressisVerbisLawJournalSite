@@ -31,3 +31,12 @@ class Update(models.Model):
     publicationDate = models.DateTimeField()
     photo = models.ImageField(upload_to='updates/')
     text = models.TextField()
+
+
+class Contact(models.Model):
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email

@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import *
 
 
-
 # Register your models here.
 
 
@@ -23,4 +22,9 @@ class TeamAdmin(admin.ModelAdmin):
 
 @admin.register(Update)
 class UpdateAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
     pass

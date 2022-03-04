@@ -1,0 +1,14 @@
+.contact-form-container {
+  display: flex;
+  align-items: flex-start;
+  min-height: 75vh;
+  margin: 0.5rem;
+  flex-direction: column
+}
+
+input[type=text], input[type=email], textarea {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+}
