@@ -35,7 +35,7 @@ def contact(request):
             print([email_subject, email_message,
                   settings.CONTACT_EMAIL, settings.ADMIN_EMAIL])
             send_mail(email_subject, email_message,
-                      settings.CONTACT_EMAIL, settings.ADMIN_EMAIL)
+                      settings.CONTACT_EMAIL, settings.ADMIN_EMAIL, fail_silently=False)
             return render(request, 'contact.html', {'success': success, 'form': form})
         else:
             raise BadRequest("Error 400 - Bad Request")
