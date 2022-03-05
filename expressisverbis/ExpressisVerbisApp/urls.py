@@ -13,4 +13,5 @@ urlpatterns = [
     path('team', views.team, name='team'),
     path('sponsors', views.sponsors, name='sponsors'),
     path('announcements', views.announcements, name='announcements'),
+    path('announcements/<str:annr>', views.announcement, name='announcement'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -32,6 +32,9 @@ class Update(models.Model):
     photo = models.ImageField(upload_to='updates/')
     text = models.TextField()
 
+    def __str__(self):
+        return self.title
+
 
 class Contact(models.Model):
     email = models.EmailField()
