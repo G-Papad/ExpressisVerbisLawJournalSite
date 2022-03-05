@@ -1,7 +1,11 @@
 from django.shortcuts import render
-from .models import Issue, Sponsor, Team, Update
+from .models import Issue, Sponsor, Team, Update, Contact
 from django.http import Http404
 from django.http import HttpResponse
+from .forms import ContactForm
+from django.core.exceptions import ValidationError, BadRequest
+from django.core.mail import send_mail
+from django.conf import settings
 
 # Create your views here.
 
@@ -22,9 +26,23 @@ def members(request):
 
 def contact(request):
     if request.method == 'POST':
-        form = request.POST
-        print(form)
-    return render(request, 'contact.html')
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            success = "Η φόρμα επικοινωνίας σας κατατέθηκε με επιτυχία."
+            email_subject = f'New contact {form.cleaned_data["email"]}: {form.cleaned_data["subject"]}'
+            email_message = form.cleaned_data['message']
+            print([email_subject, email_message,
+                  settings.CONTACT_EMAIL, settings.ADMIN_EMAIL])
+            send_mail(email_subject, email_message,
+                      settings.CONTACT_EMAIL, settings.ADMIN_EMAIL, fail_silently=False)
+            return render(request, 'contact.html', {'success': success, 'form': form})
+        else:
+            raise BadRequest("Error 400 - Bad Request")
+    form = ContactForm()
+    context = {'form': form}
+    success = ""
+    return render(request, 'contact.html', context)
 
 
 def team(request):

@@ -4,18 +4,22 @@
   {% block title %} ExpressisVerbis Law Journal {% endblock %}
   {%block content%}
 
-    <body>
-      <h2>Επικοινωνία</h2>
-
-      <form name="contact_form" method = "POST">
-        {%csrf_token%}
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value="John"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value="Doe"><br><br>
-        <input type="submit" value="Submit">
-      </form>
-
-    </body>
+  <div class="contact-form-container">
+    <div class="row">
+      <div class="column">
+        <h3>{{success}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h2>Επικοινωνία</h2>
+        <form action="" method="post">
+          {% csrf_token %}
+          {{ form }}
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
 
   {% endblock %}
