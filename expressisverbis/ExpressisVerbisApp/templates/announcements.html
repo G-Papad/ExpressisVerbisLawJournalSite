@@ -3,4 +3,14 @@
 {% block title %} Ανακοινώσεις | ExpressisVerbis {% endblock %}
 {%block content%}
 <p>Announcements</p>
+<div class="issues_container">
+  {% for announcement in updates %}
+  <div class="issue-container col-4 col-s-6">
+    <div class="issue">
+        <a href="/announcements/{{announcement.pk}}"><img src="{{ announcement.photo.url}}" alt="cover {{announcement.pk}}" width=100% class='cover-photo'></a>
+        <p>Ημερομηνία: {{announcement.publicationDate}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}

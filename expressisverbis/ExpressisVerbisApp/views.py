@@ -55,7 +55,8 @@ def sponsors(request):
 
 
 def announcements(request):
-    return render(request, 'announcements.html')
+    ann = Update.objects.all().order_by('-publicationDate')
+    return render(request, 'announcements.html', {'updates': ann})
 
 
 def issues_pdf(request, issnr):
@@ -68,3 +69,14 @@ def issues_pdf(request, issnr):
     if request.method == 'GET':
         print(pdf)
         return render(request, 'issues_pdf.html', {'issue': pdf})
+
+
+def announcement(request, annr):
+    try:
+        ann = Update.objects.get(pk=annr)
+    except Update.objects.get(pk=annr).DoesNotExist():
+        return HttpResponse(status=404)
+
+    if request.method == 'GET':
+        print(ann)
+        return render(request, 'announcement.html', {'update': ann})
