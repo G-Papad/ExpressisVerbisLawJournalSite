@@ -5,10 +5,12 @@
 {%csrf_token%}
 <div class="issues_container">
   {% for issue in issues %}
-  <div class="issue">
-    <a href="/issues/{{issue.issueNumber}}"><img src="{{ issue.cover.url}}" alt="cover {{issue.issueNumber}}" width=100% class='cover-photo'></a>
-    <!-- το path που δινει το issue.cover ειναι λιγο προβληματικο -->
-    <p>Τεύχος {{issue.issueNumber}}</p>
+  <div class="issue-row col-4">
+    <div class="issue">
+        <a href="/issues/{{issue.issueNumber}}"><img src="{{ issue.cover.url}}" alt="cover {{issue.issueNumber}}" width=100% class='cover-photo'></a>
+        <!-- το path που δινει το issue.cover ειναι λιγο προβληματικο -->
+        <p>Τεύχος {{issue.issueNumber}}</p>
+    </div>
   </div>
   {% endfor %}
 </div>
