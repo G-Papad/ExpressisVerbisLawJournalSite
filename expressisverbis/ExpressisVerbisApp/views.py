@@ -50,7 +50,8 @@ def team(request):
 
 
 def sponsors(request):
-    return render(request, 'sponsors.html')
+    Sponsors = Sponsor.objects.all()
+    return render(request, 'sponsors.html', {'sponsors': Sponsors})
 
 
 def announcements(request):

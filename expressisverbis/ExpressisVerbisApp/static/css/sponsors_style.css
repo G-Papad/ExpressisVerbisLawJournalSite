@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.sponsors_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  min-height: 75vh;
+  margin: 0em 7em;
+}
+
+.sponsor {
+  background-color: lightgray;
+  border-radius: 10px;
+  border: 0.2px solid #555;
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em!important;
+}
+
+.sponsor:hover {
+  background-color: #666;
+  padding:2px;
+}
+
+.sponsor-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.sponsor-logo{
+  object-fit: contain;
+  height: 7rem;
+  width: 7rem;
+}
+
+@media (max-width:600px){
+  .sponsor-container {
+  margin:0em;
+  }
+}

@@ -4,5 +4,14 @@
     margin-left: 4em;
 }
 
-.container .text{
+.text-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.text-container .text{
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
 }
