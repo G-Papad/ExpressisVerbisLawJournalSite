@@ -1,4 +1,6 @@
-
+body{
+  min-height: 75vh;
+}
 .footer-class {
   display: flex;
   position: relative;
@@ -12,6 +14,7 @@
   height: 6rem;
   background-color: #050823;
   min-height: 80px;
+  margin-top: 3em;
 }
 
 .footer-text-left {
