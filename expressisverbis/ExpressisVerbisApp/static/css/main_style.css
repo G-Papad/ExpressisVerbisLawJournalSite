@@ -10,7 +10,17 @@
 }
 
 .text-container .text{
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     width: fit-content;
+}
+
+.latest-issue-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fdTopBar{
+    display: none;
 }
