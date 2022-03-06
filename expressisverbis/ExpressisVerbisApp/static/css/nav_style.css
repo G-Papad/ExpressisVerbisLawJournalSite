@@ -28,12 +28,24 @@ body {
     height: 6rem;
 }
 
+
 .nav_logo_container .nav_logo{
     object-fit: contain;
     width: 145%;
     height: 115%;
-  }
+}
 
+.navbar .elsa_logo_container{
+    width: 9rem;
+    height: 6rem;
+    margin: 2rem;
+}
+
+.elsa_logo_container .elsa_logo  {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
 .navbar-links {
     height: 100%;
 }
