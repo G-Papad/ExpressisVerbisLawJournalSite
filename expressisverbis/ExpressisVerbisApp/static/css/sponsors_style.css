@@ -12,7 +12,7 @@
 }
 
 .sponsor {
-  background-color: lightgray;
+  background-color: var(--exp-lightgrey);
   border-radius: 10px;
   border: 0.2px solid #555;
   height: 10rem;
@@ -45,6 +45,16 @@
   object-fit: contain;
   height: 7rem;
   width: 7rem;
+}
+
+.category-container{
+  display: block;
+  flex-direction: column;
+}
+
+.category-title{
+  text-align: center;
+  margin-top: 1.5em;
 }
 
 @media (max-width:600px){

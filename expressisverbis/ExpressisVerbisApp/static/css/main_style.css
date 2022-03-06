@@ -7,7 +7,6 @@
 .text-container{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 .text-container .text{
