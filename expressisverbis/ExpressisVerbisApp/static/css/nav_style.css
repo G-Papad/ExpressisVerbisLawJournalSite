@@ -12,7 +12,7 @@ body {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #050823;
+    background-color: var(--exp-blue);
     color: white;
     min-height: 80px;
 }
@@ -51,7 +51,7 @@ body {
 .navbar-links li a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: var(--exp-white);
     padding: 1rem;
     font-size: 1.4em;
 }

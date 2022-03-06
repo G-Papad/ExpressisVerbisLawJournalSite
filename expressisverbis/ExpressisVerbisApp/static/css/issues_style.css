@@ -12,7 +12,7 @@
 }
 
 .issue {
-  background-color: lightgray;
+  background-color: var(--exp-lightgrey);
   border-radius: 10px;
   border: 0.2px solid #555;
   height: 28rem;
@@ -45,6 +45,12 @@
   object-fit: contain;
   height: 15rem;
   width: 15rem;
+}
+
+.issue-title{
+  text-align: center;
+  font-size: x-large;
+  padding-top: 2em;
 }
 
 @media (max-width:600px){
