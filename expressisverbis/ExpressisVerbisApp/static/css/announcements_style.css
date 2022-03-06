@@ -28,11 +28,19 @@
   margin: 1rem;
 }
 .w1 {
-  flex: 30%
+  flex: 30%;
 }
 
 .w2 {
+  display: flex;
   flex: 70%;
+  justify-content: center;
+  align-content: center;
+}
+
+.w3 {
+  flex-wrap: wrap;
+  flex: 100%;
 }
 
 .announcement-title {
