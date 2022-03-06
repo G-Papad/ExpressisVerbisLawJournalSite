@@ -2,15 +2,34 @@
 {% load static %}
 {% block title %} Ανακοινώσεις | ExpressisVerbis {% endblock %}
 {%block content%}
+<style>
+    a { text-decoration: none; }
+  </style>
 <p>Announcements</p>
-<div class="issues_container">
+<div class="announcement-container">
   {% for announcement in updates %}
-  <div class="issue-container col-4 col-s-6">
-    <div class="issue">
-        <a href="/announcements/{{announcement.pk}}"><img src="{{ announcement.photo.url}}" alt="cover {{announcement.pk}}" width=100% class='cover-photo'></a>
-        <p>Ημερομηνία: {{announcement.publicationDate}}</p>
+  <div class="announcement">
+    <div class="row">
+      <div class="column col-3 col-s-4">
+        <a href="/announcements/{{announcement.pk}}"><p class="announcement-title">{{announcement.title}}</p></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="w1">
+        <div class="announcement-img">
+          <a href="/announcements/{{announcement.pk}}"><img src="{{announcement.photo.url}}" alt="cover {{announcement.pk}}" width=100% class='cover-photo'></a>
+        </div>
+      </div>
+      <div class="w2">
+        <p class="announcement-text">{{announcement.subtitle}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <p class="announcement-text">Ημερομηνία: {{announcement.publicationDate}}</p>
     </div>
   </div>
+
   {% endfor %}
 </div>
+
 {% endblock %}
