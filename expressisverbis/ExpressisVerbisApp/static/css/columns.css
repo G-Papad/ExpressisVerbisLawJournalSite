@@ -34,3 +34,39 @@
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   }
+
+  [class*="row-"] {
+    height: 100%;
+  }
+  
+  @media only screen and (min-width: 950px) {
+    /* For tablets: */
+    .row-s-1 {height: 8.33%;}
+    .row-s-2 {height: 16.66%;}
+    .row-s-3 {height: 25%;}
+    .row-s-4 {height: 33.33%;}
+    .row-s-5 {height: 41.66%;}
+    .row-s-6 {height: 50%;}
+    .row-s-7 {height: 58.33%;}
+    .row-s-8 {height: 66.66%;}
+    .row-s-9 {height: 75%;}
+    .row-s-10 {height: 83.33%;}
+    .row-s-11 {height: 91.66%;}
+    .row-s-12 {height: 100%;}
+  }
+  
+  @media only screen and (min-width: 1275px) {
+    /* For desktop: */
+    .row-1 {height: 8.33%;}
+    .row-2 {height: 16.66%;}
+    .row-3 {height: 25%;}
+    .row-4 {height: 33.33%;}
+    .row-5 {height: 41.66%;}
+    .row-6 {height: 50%;}
+    .row-7 {height: 58.33%;}
+    .row-8 {height: 66.66%;}
+    .row-9 {height: 75%;}
+    .row-10 {height: 83.33%;}
+    .row-11 {height: 91.66%;}
+    .row-12 {height: 100%;}
+  }

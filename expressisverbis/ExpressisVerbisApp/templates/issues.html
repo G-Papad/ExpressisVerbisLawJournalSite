@@ -5,14 +5,20 @@
 {%csrf_token%}
 <!-- <h1> Τεύχη</h1> -->
 <div class="issues-page-container">
-  <h1 class="category-title">Τεύχη</h1>
+  <h1 class="category-title">Τεύχη του ExpressisVerbis</h1>
   <div class="issues_container">
     {% for issue in issues %}
-    <div class="issue-container col-4 col-s-6">
-      <div class="issue">
+    <div class="issue-container col-12">
+      <!-- <div class="issue"> -->
+        <div class="issue-image col-3 col-s-3">
           <a href="/issues/{{issue.issueNumber}}"><img src="{{ issue.cover.url}}" alt="cover {{issue.issueNumber}}" width=100% class='cover-photo'></a>
-          <p class="issue-title">Τεύχος {{issue.issueNumber}}</p>
-      </div>
+        </div>
+        <div class="issue-info col-9 col-s-9"> 
+          <p class="issue-title row-4">Τεύχος {{issue.issueNumber}}</p>
+          <p class="row-4">Start Date: {{issue.startDate}} | Finish Date: {{issue.publicationDate}}</p>
+          <p class="row-4">{{issue.context}}</p>
+        </div> 
+      <!-- </div> -->
     </div>
     {% endfor %}
   </div>

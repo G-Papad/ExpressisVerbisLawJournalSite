@@ -5,10 +5,32 @@
 .issues_container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
   min-height: 75vh;
-  margin: 0em 7em;
+  margin: 0em 7em;;
+}
+
+.issue-container{
+  display: flex;
+  flex-direction: row;
+  /* align-items: center;
+  justify-content: center; */
+  margin-top: 3em;
+}
+
+.issue-image{
+
+}
+
+.issue-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-top: black solid 1px;
+  border-bottom: black solid 1px;
 }
 
 .issue {
@@ -29,11 +51,6 @@
   padding:2px;
 }
 
-.issue-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .issue-row::after {
   content: "";
@@ -50,7 +67,7 @@
 .issue-title{
   text-align: center;
   font-size: x-large;
-  padding-top: 2em;
+  /* padding-top: 2em; */
 }
 
 @media (max-width:600px){

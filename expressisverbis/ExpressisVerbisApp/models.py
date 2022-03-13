@@ -5,17 +5,19 @@ from django.db import models
 
 class Issue(models.Model):
     issueNumber = models.IntegerField(unique=True)
-    cover = models.ImageField(
-        upload_to='covers/', default=None)
-    publicationDate = models.DateTimeField()
+    cover = models.ImageField(upload_to='covers/', default=None)
+    startDate = models.DateField()
+    publicationDate = models.DateField()
     issueFile = models.FileField(upload_to='issue/')
+    context = models.TextField(blank=True)
+
 
 
 class Sponsor(models.Model):
     name = models.CharField(max_length=50)
     logo = models.ImageField(upload_to='sponsors/')
     link = models.URLField()
-    info = models.TextField()
+    info = models.TextField(blank=True, null=True)
 
 
 class Team(models.Model):
