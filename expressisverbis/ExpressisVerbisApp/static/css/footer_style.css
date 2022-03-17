@@ -33,7 +33,8 @@ body{
 
 
 .icon-style {
-  height:2.5rem;
+  height:4rem;
+  width:4rem;
   margin-left:20px;
   margin-top:5px;
 }
@@ -41,18 +42,18 @@ body{
 .icon-style2 {
   height:4rem;
   margin-left:20px;
-  margin-top:5px;
+  margin-top:10px;
 }
 
-.icon-style:hover {
+/* .icon-style:hover {
   background-color: #555;
   padding:3px;
-}
+} */
 
-.icon-style2:hover {
+/* .icon-style2:hover {
   background-color: #555;
   padding:2px;
-}
+} */
 
 .h-custom {
   font-size: 1rem;
