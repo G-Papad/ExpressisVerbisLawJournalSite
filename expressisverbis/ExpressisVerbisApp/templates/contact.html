@@ -4,21 +4,40 @@
   {% block title %} ExpressisVerbis Law Journal {% endblock %}
   {%block content%}
 
-  <div class="contact-form-container">
-    <div class="row">
-      <div class="column">
-        <h3>{{success}}</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
+  <div class="container">
+    <h3>{{success}}</h3>
+    <div class="contact-col">
         <h2>Επικοινωνία</h2>
-        <form action="" method="post">
-          {% csrf_token %}
-          {{ form }}
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+        <hr size="5">
+        <h4>Κείμενο για Επικοινωνία</h4>
+          <form action="" method="post">
+            {% csrf_token %}
+            <!-- <div class="col">
+              <div style="float:left;margin-right:20px;">
+                <label for="name">Ονοματεπώνυμο:</label>
+                  {{ form.name }}
+              </div>
+              <div style="float:left;margin-right:20px;">
+                <label for="email">Email:</label>
+                {{ form.email }}
+              </div>
+              <div style="float:left;margin-right:20px;">
+                <label for="subject">Θέμα:</label>
+                {{ form.subject }}
+              </div>
+              <div style="float:left;margin-right:20px;">
+                <label for="message">Μήνυμα:</label>
+                {{ form.message }}
+              </div> -->
+              <div class="contact-col">
+                {{form}}
+              </div>
+
+              <div class="contact-form">
+                <input class="btn btn-primary" type="submit" value="Υποβολή">
+              </div>
+            <!-- </div> -->
+          </form>
     </div>
   </div>
 

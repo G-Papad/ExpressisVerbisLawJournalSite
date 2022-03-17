@@ -12,7 +12,6 @@ class Issue(models.Model):
     context = models.TextField(blank=True)
 
 
-
 class Sponsor(models.Model):
     name = models.CharField(max_length=50)
     logo = models.ImageField(upload_to='sponsors/')
@@ -39,6 +38,7 @@ class Update(models.Model):
 
 
 class Contact(models.Model):
+    name = models.CharField(max_length=255, default=None)
     email = models.EmailField()
     subject = models.CharField(max_length=255)
     message = models.TextField()

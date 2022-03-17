@@ -1,14 +1,29 @@
-.contact-form-container {
-  display: flex;
-  align-items: flex-start;
-  min-height: 75vh;
-  margin: 0.5rem;
-  flex-direction: column
-}
-
-input[type=text], input[type=email], textarea {
+input, textarea , label{
  width: 100%;
  padding: 12px 20px;
  margin: 8px 0;
- display: inline-block;
+ display: block;
+}
+
+.contact-form {
+  display: flex;
+  width:100%;
+  margin: 0.5rem;
+  flex-direction: column;
+  display: inline-block;
+  align-items: stretch;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 1rem;
+  background-color: blue;
+  flex-direction: column;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction:column;
 }

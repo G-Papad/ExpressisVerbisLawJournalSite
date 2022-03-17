@@ -31,7 +31,7 @@ def contact(request):
         if form.is_valid():
             form.save()
             success = "Η φόρμα επικοινωνίας σας κατατέθηκε με επιτυχία."
-            email_subject = f'New contact {form.cleaned_data["email"]}: {form.cleaned_data["subject"]}'
+            email_subject = f'New contact {form.cleaned_data["name"]} {form.cleaned_data["email"]}: {form.cleaned_data["subject"]}'
             email_message = form.cleaned_data['message']
             print([email_subject, email_message,
                   settings.CONTACT_EMAIL, settings.ADMIN_EMAIL])
