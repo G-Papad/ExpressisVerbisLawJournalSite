@@ -1,0 +1,7 @@
+.team-container{
+    padding: 2em;
+}
+.team-member{
+    display: flex;
+    flex-direction: row;
+}
