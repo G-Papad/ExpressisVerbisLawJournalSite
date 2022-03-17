@@ -1,0 +1,31 @@
+.split-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.mem-container-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 3em;
+}
+
+.mem-container-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 3em;
+}
+
+.line-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    border: var(--exp-blue) solid;
+    height: 100%;
+    width: 1px;
+}

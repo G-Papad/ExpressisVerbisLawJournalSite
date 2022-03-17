@@ -47,7 +47,8 @@ def contact(request):
 
 
 def team(request):
-    return render(request, 'team.html')
+    team = Team.objects.all()
+    return render(request, 'team.html', {'team': team})
 
 
 def sponsors(request):
