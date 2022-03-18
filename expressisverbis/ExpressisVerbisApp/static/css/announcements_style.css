@@ -120,21 +120,3 @@ a {
     margin:0em;
   }
 }
-
-/* @media (max-width:700px){
-  .announcement-title-container {
-    height: auto;
-    margin: auto;
-  }
-  .announcement-text-container {
-    width: 100%;
-    height: auto;
-    margin: auto;
-  }
-
-  .announcement {
-  margin-bottom: 2rem;
-  margin: 1rem;
-  height: auto;
-  }
-} */
