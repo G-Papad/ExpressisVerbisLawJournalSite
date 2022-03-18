@@ -134,7 +134,7 @@ XS_SHARING_ALLOWED_METHODS = ['POST', 'GET', 'OPTIONS', 'PUT', 'DELETE']
 
 
 CONTACT_EMAIL = 'panagiotis.kokkinakis@outlook.com'
-ADMIN_EMAIL = ['geopapadoulis@gmail.com', 'pkokk7@gmail.com']
+ADMIN_EMAIL = ['geopapadoulis@gmail.com', 'pkokk7@gmail.com', ]
 
 
 # Twilio SendGrid

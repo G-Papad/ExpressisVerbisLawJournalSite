@@ -6,15 +6,13 @@ input, textarea , label{
 }
 
 .contact-form {
-  display: flex;
   width:100%;
   margin: 0.5rem;
-  flex-direction: column;
   display: inline-block;
   align-items: stretch;
 }
 
-.container {
+.contact-container {
   display: flex;
   justify-content: center;
   min-height: 100vh;

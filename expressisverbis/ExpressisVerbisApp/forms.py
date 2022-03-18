@@ -13,13 +13,15 @@ class ContactForm(ModelForm):
         }
         widgets = {
             'name': TextInput(attrs={
-                'style': 'min-width: 8rem;  width: 40rem',
+                'style': 'min-width: 8rem;  width: 100%;',
                 }),
             'email': EmailInput(attrs={
-                'style': 'min-width: 8rem;  width: 40rem',
-                # 'placeholder': 'Email'
+                'style': 'min-width: 8rem;  width: 100%',
                 }),
             'subject': TextInput(attrs={
-                'style': 'min-width: 8rem; width: 40rem',
+                'style': 'min-width: 8rem; width: 100%',
                 }),
+            # 'message': TextInput(attrs={
+            #     'style': 'min-width: 8rem; width 100%; height: 8rem;',
+            # }),
         }
