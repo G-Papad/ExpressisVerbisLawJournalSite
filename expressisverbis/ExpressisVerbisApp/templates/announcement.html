@@ -1,6 +1,21 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load static %}
 {% block title %} Ανακοινώσεις | ExpressisVerbis {% endblock %}
 {%block content%}
-
+<div class="announcement-container">
+  <div class="announcement2">
+    <p class="announcement-text">
+      {% language 'el' %}
+        {{update.publicationDate|date:'D, d M Y' }}
+      {% endlanguage %}</p>
+    <p class="announcement-title2">{{update.title}}</p>
+    <p class="announcement-text">{{update.subtitle}}</p>
+    <hr size='5px' color='#b9a796'>
+    <div class="announcement-img">
+        <img src="{{update.photo.url}}" alt="cover {{update.pk}}" width=100% class='cover-photo'>
+    </div>
+    <p class="announcement-text">{{update.text}}</p>
+  </div>
+</div>
 {% endblock %}

@@ -3,13 +3,13 @@
   {% load static %}
   {% block title %} ExpressisVerbis Law Journal {% endblock %}
   {%block content%}
+  <h1 class="category-title">Επικοινωνία</h1>
 
   <div class="contact-container">
     <h2>{{success}}</h2>
     <div class="contact-container2">
-        <h1 class="category-title">Επικοινωνία</h1>
-        <hr size="5">
         <h4>Κείμενο για Επικοινωνία</h4>
+        <hr size="5">
           <form action="" method="post">
             {% csrf_token %}
             <div class="contact-col">

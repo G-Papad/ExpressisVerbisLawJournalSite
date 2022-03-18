@@ -1,36 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 {% block title %} Ανακοινώσεις | ExpressisVerbis {% endblock %}
 {%block content%}
-<style>
-    a { text-decoration: none; }
-  </style>
-<p>Announcements</p>
+
+<h1 class="category-title">Ανακοινώσεις</h1>
 <div class="announcement-container">
+
   {% for announcement in updates %}
   <div class="announcement">
-    <div class="row">
-      <div class="column col-3 col-s-4">
-        <a href="/announcements/{{announcement.pk}}"><p class="announcement-title">{{announcement.title}}</p></a>
-      </div>
+    <hr size="5">
+    <div class="announcement-title-container">
+      <a href="/announcements/{{announcement.pk}}"><p class="announcement-title">{{announcement.title}}</p></a>
     </div>
-    <div class="row">
-      <div class="w1">
-        <div class="announcement-img">
-          <a href="/announcements/{{announcement.pk}}"><img src="{{announcement.photo.url}}" alt="cover {{announcement.pk}}" width=100% class='cover-photo'></a>
-        </div>
-      </div>
-      <div class="w2">
-        <div class="w3">
-          <p class="announcement-text">{{announcement.subtitle}}</p>
-        </div>
-      </div>
+    <div class="announcement-img">
+      <a href="/announcements/{{announcement.pk}}"><img src="{{announcement.photo.url}}" alt="cover {{announcement.pk}}" width=100% class='cover-photo'></a>
     </div>
-    <div class="row">
-      <p class="announcement-text">Ημερομηνία: {{announcement.publicationDate}}</p>
+    <div class="announcement-text-container">
+      <p class="announcement-text">{{announcement.subtitle}}</p>
+      <p class="announcement-text">
+        {% language 'el' %}
+          {{announcement.publicationDate|date:'D, d M Y' }}
+        {% endlanguage %}</p>
     </div>
   </div>
-
   {% endfor %}
 </div>
 
