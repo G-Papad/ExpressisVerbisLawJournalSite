@@ -53,6 +53,7 @@
   font-size: 1.2rem;
   margin: 1rem;
   word-wrap: normal;
+  text-align: justify;
 }
 
 @media (max-width:600px){

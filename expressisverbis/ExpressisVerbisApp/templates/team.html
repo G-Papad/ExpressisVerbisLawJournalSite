@@ -4,7 +4,7 @@
 {%block content%}
 <h1 class="category-title">Η Ομάδα</h1>
 <div class="team-container">
-    <p>Η  Συγγραφική Ομάδα του «Expressis Verbis Law Journal» είναι τα πρόσωπα που βρίσκονται πίσω από τη λειτουργία και εκπόνηση του περιοδικού, τυγχάνουν μέλη της ELSA Thessaloniki και καταβάλλουν κοινές προσπάθειες με σκοπό τη συγγραφή και την έκδοσή του. Η ομάδα συναπαρτίζεται κατά ιεραρχική σειρά, από τον Αρχισυντάκτη, τη Συντακτική Επιτροπή και τους Αρθρογράφους, Ειδικότερα, η κατανομή των ρόλων γίνεται ως εξής:</p>
+    <p style="text-align: justify;">Η  Συγγραφική Ομάδα του «Expressis Verbis Law Journal» είναι τα πρόσωπα που βρίσκονται πίσω από τη λειτουργία και εκπόνηση του περιοδικού, τυγχάνουν μέλη της ELSA Thessaloniki και καταβάλλουν κοινές προσπάθειες με σκοπό τη συγγραφή και την έκδοσή του. Η ομάδα συναπαρτίζεται κατά ιεραρχική σειρά, από τον Αρχισυντάκτη, τη Συντακτική Επιτροπή και τους Αρθρογράφους, Ειδικότερα, η κατανομή των ρόλων γίνεται ως εξής:</p>
     {% for member in team %}
     <h3>{{member.rank}}</h3>
     <div class="team-member">
@@ -12,7 +12,13 @@
             <img src="{{ member.photo.url}}" alt="member photo" width=100% class='cover-photo'>
         </div>
         <div class="col-9">
-        <p>{{ member.description }}</p>
+        <p style="text-align: justify;">{{ member.description }}</p>
+        {% if member.rank == "Αρχισυντάκτης" %}
+        <p >Φετινός Αρχισυντάκτης: {{ member.name }}</p>
+        {% endif %}
+        {% if member.rank == "Συντακτική Επιτροπή" %}
+            <p>Φετινή Συντακτική Επιτροπή: {{member.name}}</p>
+        {% endif %}
         </div>
     </div>
     {% endfor %}
