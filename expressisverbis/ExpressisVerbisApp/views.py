@@ -58,7 +58,7 @@ def sponsors(request):
 
 def announcements(request):
     ann = Update.objects.all().order_by('-publicationDate')[1:]
-    latest = latest_issue = Update.objects.order_by("publicationDate")[0]
+    latest = latest_issue = Update.objects.order_by("-publicationDate")[0]
     return render(request, 'announcements.html', {'updates': ann, 'latest': latest})
 
 
@@ -81,5 +81,4 @@ def announcement(request, annr):
         return HttpResponse(status=404)
 
     if request.method == 'GET':
-        print(ann)
         return render(request, 'announcement.html', {'update': ann})

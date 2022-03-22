@@ -11,6 +11,9 @@ class Issue(models.Model):
     issueFile = models.FileField(upload_to='issue/')
     context = models.TextField(blank=True)
 
+    def __str__(self):
+        return "Issue Nr" + str(self.issueNumber)
+
 
 class Sponsor(models.Model):
     name = models.CharField(max_length=50)
@@ -18,12 +21,18 @@ class Sponsor(models.Model):
     link = models.URLField()
     info = models.TextField(blank=True, null=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Team(models.Model):
     name = models.CharField(max_length=50)
     rank = models.CharField(max_length=50)
     photo = models.ImageField(upload_to='team/')
     description = models.TextField()
+
+    def __str__(self):
+        return self.name
 
 
 class Update(models.Model):
