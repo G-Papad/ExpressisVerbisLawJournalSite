@@ -6,6 +6,24 @@
 
 <h1 class="category-title">Ανακοινώσεις</h1>
 <div class="announcement-container">
+  <div class="announcement3">
+    <hr size="5" color='#b9a796'>
+    <div class="announcement-title-container">
+      <a href="/announcements/{{latest.pk}}"><p class="announcement-title">{{latest.title}}</p></a>
+    </div>
+    <div class="announcement-img">
+      <a href="/announcements/{{latest.pk}}"><img src="{{latest.photo.url}}" alt="cover {{announcement.pk}}" width=100% class='cover-photo'></a>
+    </div>
+    <div class="announcement-text-container">
+      <p class="announcement-text">{{latest.subtitle}}</p>
+      <p class="announcement-text">
+        {% language 'el' %}
+          {{latest.publicationDate|date:'D, d M Y' }}
+        {% endlanguage %}</p>
+    </div>
+  </div>
+</div>
+<div class="announcement-container">
 
   {% for announcement in updates %}
   <div class="announcement">

@@ -57,8 +57,9 @@ def sponsors(request):
 
 
 def announcements(request):
-    ann = Update.objects.all().order_by('-publicationDate')
-    return render(request, 'announcements.html', {'updates': ann})
+    ann = Update.objects.all().order_by('-publicationDate')[1:]
+    latest = latest_issue = Update.objects.order_by("publicationDate")[0]
+    return render(request, 'announcements.html', {'updates': ann, 'latest': latest})
 
 
 def issues_pdf(request, issnr):
