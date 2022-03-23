@@ -7,9 +7,11 @@
   <h1 class="category-title">Χορηγοί</h1>
   <div class="sponsors_container">
     {% for sponsor in sponsors %}
-    <div class="sponsor-container col-2 col-s-4">
+    <div class="sponsor-container col-6 col-s-4">
       <div class="sponsor">
-          <a href="{{sponsor.link}}"><img src="{{sponsor.logo.url}}" alt="cover {{sponsor.name}}" width=100% class='sponsor-logo'></a>
+          <a href="{{sponsor.link}}">
+            <img src="{{sponsor.logo.url}}" alt="cover {{sponsor.name}}" width=100% class='sponsor-logo'>
+          </a>
       </div>
     </div>
     {% endfor %}

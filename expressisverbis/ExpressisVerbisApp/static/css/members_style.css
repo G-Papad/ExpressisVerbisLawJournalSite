@@ -1,6 +1,8 @@
 .split-container{
     display: flex;
     flex-direction: row;
+    /* temp */
+    justify-content: center;
 }
 
 .mem-container-left{
@@ -8,7 +10,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-left: 3em;
+    /* temp */
+    /* padding-left: 3em; */
 }
 
 .mem-container-right{

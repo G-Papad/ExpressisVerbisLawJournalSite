@@ -8,14 +8,14 @@
 .text-container{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .text-container .text{
     /* display: flex;
     flex-wrap: wrap; */
     /* width: fit-content; */
-    font-size: 18px;
+    font-size: 21px;
     font-family: 'Times New Roman', Times, serif;
     text-align: justify;
 }

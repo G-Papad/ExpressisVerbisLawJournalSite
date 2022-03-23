@@ -6,8 +6,8 @@ from django.db import models
 class Issue(models.Model):
     issueNumber = models.IntegerField(unique=True)
     cover = models.ImageField(upload_to='covers/', default=None)
-    startDate = models.DateField()
-    publicationDate = models.DateField()
+    startDate = models.IntegerField()
+    publicationDate = models.IntegerField()
     issueFile = models.FileField(upload_to='issue/')
     context = models.TextField(blank=True)
 
@@ -26,7 +26,7 @@ class Sponsor(models.Model):
 
 
 class Team(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.TextField()
     rank = models.CharField(max_length=50)
     photo = models.ImageField(upload_to='team/')
     description = models.TextField()

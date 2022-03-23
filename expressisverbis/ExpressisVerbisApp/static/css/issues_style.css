@@ -12,6 +12,12 @@
   margin: 0em 7em;;
 }
 
+.pdf_container{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
 .issue-container{
   display: flex;
   flex-direction: row;
@@ -68,6 +74,8 @@
   text-align: center;
   font-size: x-large;
   /* padding-top: 2em; */
+  margin-top: 1em;
+  margin-bottom: 0;
 }
 
 @media (max-width:600px){

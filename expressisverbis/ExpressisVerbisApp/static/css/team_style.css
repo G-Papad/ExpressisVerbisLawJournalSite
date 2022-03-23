@@ -4,4 +4,16 @@
 .team-member{
     display: flex;
     flex-direction: row;
+    margin: 2em;
+}
+
+.team-photo{
+    padding: 1em;
+    /* object-fit: ; */
+}
+
+.name-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }

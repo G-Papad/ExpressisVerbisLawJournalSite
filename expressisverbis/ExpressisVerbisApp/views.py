@@ -11,7 +11,7 @@ from django.conf import settings
 
 
 def mainpage(request):
-    latest_issue = Issue.objects.order_by("publicationDate")[0]
+    latest_issue = Issue.objects.order_by("startDate")[0]
     return render(request, 'mainpage.html', {'latest_issue': latest_issue})
 
 
