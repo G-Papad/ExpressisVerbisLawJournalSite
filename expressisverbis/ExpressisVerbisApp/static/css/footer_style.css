@@ -35,14 +35,12 @@ body{
 .icon-style {
   height:4rem;
   width:4rem;
-  margin-left:20px;
-  margin-top:5px;
+  margin: 0 auto;
 }
 
 .icon-style2 {
   height:4rem;
-  margin-left:20px;
-  margin-top:10px;
+  margin-left: 0 2em;
 }
 
 /* .icon-style:hover {
@@ -95,12 +93,12 @@ body{
     }
 }
 
-@media (max-device-width: 650px){
+@media (max-width: 650px){
   .footer-class {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      height: 10rem;
+      height: 14rem;
   }
 
   .footer-text-left {
