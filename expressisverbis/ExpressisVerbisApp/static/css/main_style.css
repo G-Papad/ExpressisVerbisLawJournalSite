@@ -29,3 +29,18 @@
 .fdTopBar{
     display: none;
 }
+
+@media (max-width:600px) {
+  .text-container .text {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    padding: 0 2.5em;
+  }
+}
+
+@media (max-width:1300px) {
+  .text-container .text {
+    padding: 0 2.5em;
+  }
+}
