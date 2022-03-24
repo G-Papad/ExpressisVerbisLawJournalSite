@@ -83,3 +83,20 @@
   margin:0em;
   }
 }
+
+@media (max-width:1200px){
+  .issues_container{
+    margin: 0;
+  }
+  .issue-container{
+    flex-direction: column;
+  }
+  .issue-image{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .issue-info{
+    border-top: 0;
+  }
+}
