@@ -57,8 +57,11 @@ def sponsors(request):
 
 
 def announcements(request):
-    ann = Update.objects.all().order_by('-publicationDate')[1:]
-    latest = latest_issue = Update.objects.order_by("-publicationDate")[0]
+    try:
+        ann = Update.objects.all().order_by('-publicationDate')[1:]
+        latest = latest_issue = Update.objects.order_by("-publicationDate")[0]
+    except IndexError:
+        return render(request, 'announcements.html')
     return render(request, 'announcements.html', {'updates': ann, 'latest': latest})
 
 
