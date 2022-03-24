@@ -42,3 +42,9 @@ input[type=text], input[type=email], textarea, label {
   display: block;
   align-items: stretch;
 }
+
+.submit-button{
+  border-radius: 10px;
+  width: 9em;
+  height: 3em;
+}
