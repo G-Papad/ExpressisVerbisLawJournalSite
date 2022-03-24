@@ -17,3 +17,15 @@
     align-items: center;
     justify-content: flex-start;
 }
+
+@media (max-width:900px) {
+    .team-member{
+        flex-direction: column;
+    }
+    .team-container{
+        padding: 0;
+    }
+    .team-general-text{
+        padding:0.5em;
+    }
+}

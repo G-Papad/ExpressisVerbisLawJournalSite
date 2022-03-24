@@ -31,14 +31,17 @@ p{
 pre{
   line-height: 1.8;
   text-align: justify;
-  font-size: 18px;
+  font-size: 21px;
   font-family: 'Times New Roman', Times, serif;
   margin:0;
 
 }
 
-/* @media (max-width:1300px) {
+@media (max-width:1300px) {
   p {
-    padding: 0 2.5em;
+    font-size: 18px;
   }
-} */
+  pre{
+    font-size: 18px;
+  }
+}
