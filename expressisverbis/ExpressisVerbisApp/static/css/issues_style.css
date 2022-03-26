@@ -16,7 +16,13 @@
   display: flex;
   justify-self: center;
   align-items: center;
+  width: 100vw;
 }
+
+.pdf{
+  width: -webkit-fill-available;
+}
+
 
 .issue-container{
   display: flex;
