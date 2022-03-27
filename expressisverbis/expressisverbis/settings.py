@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-0hlw2b2-zg0d+5yp$sn)jp#0b%m%n(5a29_l@qf%*o_2k)nsfe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.1.11"]
+ALLOWED_HOSTS = ["192.168.1.11", "192.168.2.4", ]
 
 
 # Application definition
@@ -133,9 +133,12 @@ X_FRAME_OPTIONS = 'ALLOWALL'
 XS_SHARING_ALLOWED_METHODS = ['POST', 'GET', 'OPTIONS', 'PUT', 'DELETE']
 
 
-CONTACT_EMAIL = 'panagiotis.kokkinakis@outlook.com'
-ADMIN_EMAIL = ['geopapadoulis@gmail.com', 'pkokk7@gmail.com', ]
+CONTACT_EMAIL = 'dir.marketing.thessaloniki@gr.elsa.org'
+# ADMIN_EMAIL = ['academicactivities.thessaloniki@gr.elsa.org',
+#                'expressis.verbis@gr.elsa.org', ]
 
+# CONTACT_EMAIL = 'panagiotis.kokkinakis@outlook.com'
+ADMIN_EMAIL = ['pkokk7@gmail.com']
 
 # Twilio SendGrid
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
