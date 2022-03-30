@@ -24,6 +24,7 @@ main {
 
 h1 {
   margin: 2vh 0 0 0;
+  font-family: 'Lato', sans-serif;
 }
 
 body{
@@ -34,16 +35,24 @@ p{
   line-height: 1.8;
   text-align: justify;
   font-size: 21px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Lato', sans-serif;
 }
 
 pre{
   line-height: 1.8;
   text-align: justify;
   font-size: 21px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Lato', Times, serif;
   margin:0;
 
+}
+
+a {
+  font-family: 'Lato', sans-serif;
+}
+
+label {
+  font-family: 'Lato', sans-serif;
 }
 
 @media (max-width:1300px) {
