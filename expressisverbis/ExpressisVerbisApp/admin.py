@@ -28,3 +28,8 @@ class UpdateAdmin(admin.ModelAdmin):
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     pass
+
+
+@admin.register(chapter)
+class chapterAdmin(admin.ModelAdmin):
+    pass

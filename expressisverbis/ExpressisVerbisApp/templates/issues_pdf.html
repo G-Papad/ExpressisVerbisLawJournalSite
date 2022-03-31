@@ -3,11 +3,7 @@
 {% block title %} ExpressisVerbis Law Journal {% endblock %}
 {%block content%}
 <h1 class="category-title">Τεύχος {{issue.issueNumber}}</h1>
-<div class="pdf_container">
-<!-- <div class="pdf"> -->
-  <!-- <iframe src="https://drive.google.com/file/d/1AaiYzVGQ2kAWdLd9QC_xzbLAAQT4aif-/preview" width="640" height="840" allow="autoplay"></iframe> -->
-  <!-- <iframe src="{{ issue.issueFile.url }}" type="application/pdf" width="800" height="620" allow="autoplay"></iframe> -->
-  <!-- <embed src="{{ issue.issueFile.url }}" type="application/pdf" class="pdf" height="620" allow="autoplay"></embed> -->
+<div class="text_container col-6">
   <h2>Περιεχόμενα</h2>
   <a href="{{ issue.issueFile.url }}" target="_blank">Read more</a>
 <!-- </div> -->

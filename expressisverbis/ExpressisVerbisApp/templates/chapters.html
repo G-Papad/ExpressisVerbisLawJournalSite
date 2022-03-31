@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} ExpressisVerbis Law Journal {% endblock %}
+{%block content%}
+<h1 class="category-title">Τεύχος 6</h1>
+<div class="chapter_container">
+  {% for chapter in chapters %}
+  <hr size='5px' color='#b9a796' width='80%'>
+  <div class="chapter">
+    <a style="text-decoration:none", href="{{ chapter.chapter_file.url }}" target="_blank">Κεφάλαιο {{chapter.chapter_nr}}</a>
+    <p class="announcement-title2">{{chapter.chapter_title}}</p>
+    <p class="announcement-text">{{chapter.editor}}</p>
+  </div>
+  {% endfor %}
+<!-- </div> -->
+</div>
+{% endblock %}

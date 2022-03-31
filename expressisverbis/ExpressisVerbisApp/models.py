@@ -54,3 +54,21 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.email
+
+
+# class latest_issue(models.Model):
+#     issue_number = models.IntegerField(unique=True)
+#     cover = models.ImageField(upload_to='covers/', default=None)
+#     startDate = models.IntegerField()
+#     publicationDate = models.IntegerField()
+#     context = models.TextField(blank=True)
+#
+#     def __str__(self):
+#         return "Issue Nr" + str(self.issueNumber)
+
+
+class chapter(models.Model):
+    chapter_nr = models.IntegerField(unique=True)
+    chapter_title = models.CharField(max_length=255, default=None)
+    editor = models.CharField(max_length=255, default=None)
+    chapter_file = models.FileField(upload_to='chapter/')
