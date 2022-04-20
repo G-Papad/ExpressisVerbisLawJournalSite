@@ -30,6 +30,15 @@
     display: none;
 }
 
+.cover-photo-main{
+  object-fit: contain;
+  /* height: 15rem; */
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  /* padding-right: 1em; */
+}
+
 @media (max-width:600px) {
   .text-container .text {
     font-size: 18px;

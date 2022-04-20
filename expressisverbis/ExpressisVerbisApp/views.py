@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Issue, Sponsor, Team, Update, Contact, chapter
+from .models import *
 from django.http import Http404
 from django.http import HttpResponse
 from .forms import ContactForm
@@ -89,9 +89,10 @@ def announcement(request, annr):
 
 def latest_issue(request):
     try:
-        chapters = chapter.objects.all().order_by('chapter_nr')
+        chapters = Chapter.objects.all()
         latest_issue = Issue.objects.order_by("-issueNumber")[0]
+        articles = Article.objects.all()
     except chapter.objects.all().DoesNotExist():
         return HttpResponse(status=404)
     if request.method == 'GET':
-        return render(request, 'chapters.html', {'chapters': chapters, 'latest': latest_issue})
+        return render(request, 'chapters.html', {'chapters': chapters, 'articles': articles, 'latest': latest_issue})

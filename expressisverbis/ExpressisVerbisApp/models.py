@@ -66,9 +66,13 @@ class Contact(models.Model):
 #     def __str__(self):
 #         return "Issue Nr" + str(self.issueNumber)
 
+class Chapter(models.Model):
+    name = models.CharField(max_length=255, default=None)
+    def __str__(self):
+        return self.name
 
-class chapter(models.Model):
-    chapter_nr = models.IntegerField(unique=True)
-    chapter_title = models.CharField(max_length=255, default=None)
-    editor = models.CharField(max_length=255, default=None)
-    chapter_file = models.FileField(upload_to='chapter/')
+class Article(models.Model):
+    category = models.ForeignKey(Chapter, on_delete=models.CASCADE, default="")
+    title = models.CharField(max_length=500, default=None)
+    editor = models.CharField(max_length=255, default=None, blank=True)
+    file = models.FileField(upload_to='chapter/')

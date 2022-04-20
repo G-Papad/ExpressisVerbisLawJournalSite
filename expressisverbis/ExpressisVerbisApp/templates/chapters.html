@@ -3,38 +3,33 @@
 {% block title %} ExpressisVerbis Law Journal {% endblock %}
 {%block content%}
 <h1 class="category-title">Τεύχος 6</h1>
-<div class="chapter_main_container">
-  <div class="issue-image col-3 col-s-3">
-    <img src="{{ latest.cover.url}}" alt="cover 6" width=100% height=100% class='cover-photo'>
-  </div>
-  <div class="chapter_container">
-    {% for chapter in chapters %}
-    <hr size='5px' color='#b9a796' width='80%'>
-    <div class="chapter">
-      <a style="text-decoration:none", href="{{ chapter.chapter_file.url }}" target="_blank">Κεφάλαιο {{chapter.chapter_nr}}</a>
-      <p class="announcement-title2">{{chapter.chapter_title}}</p>
-      <p class="announcement-text">{{chapter.editor}}</p>
-    </div>
-    {% endfor %}
-  </div>
-</div>
 
-<!-- <div class="issues-page-container">
-  <h1 class="category-title">Τεύχος 6</h1>
-  <div class="issues_container">
-    <div class="issue-container col-12">
-      <div class="issue-image col-3 col-s-3">
-        <img src="{{ latest.cover.url}}" alt="cover 6" width=100% height=100% class='cover-photo'>
-      </div>
-      {% for chapter in chapters %}
-      <hr size='5px' color='#b9a796' width='80%'>
-      <div class="chapter">
-        <a style="text-decoration:none", href="{{ chapter.chapter_file.url }}" target="_blank">Κεφάλαιο {{chapter.chapter_nr}}</a>
-        <p class="announcement-title2">{{chapter.chapter_title}}</p>
-        <p class="announcement-text">{{chapter.editor}}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div> -->
+<div class="chapter_main_container">
+  <h2 class="chapters_tag">Περιεχόμενα</h2>
+  <ul class="chapter-list">
+  {% for chapter in chapters %}
+    <li id="list-{{chapter.name}}">
+      <h2 class="chapter_name" id="{{chapter.name}}">{{chapter.name}}</h2>
+      <ul class=" articles-container" id="articles-container-{{chapter.name}}">
+      {% for article in articles %}
+        {%if article.category == chapter %}
+        <li>
+          <a href="{{ article.file.url }}" target="_blank">
+            <p class="announcement-title">{{article.title}}</p>
+          </a>
+          {%if article.editor %}
+          <p class="announcement-text">Αρθρογράφος : {{article.editor}}</p>
+          {%endif%}
+        </li>
+        {%endif%}
+      {%endfor%}
+      </ul>
+    </li>
+  {% endfor %}
+  </ul>
+  <!-- <div class="issue-image col-3 col-s-3">
+    <img src="{{ latest.cover.url}}" alt="cover 6" width=100% height=100% class='cover-photo'>
+  </div> -->
+</div>
+<script src="{% static 'js/chapter.js' %}" defer></script>
 {% endblock %}

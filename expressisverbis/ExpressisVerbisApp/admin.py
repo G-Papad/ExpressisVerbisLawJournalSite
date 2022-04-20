@@ -30,6 +30,10 @@ class ContactAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(chapter)
+@admin.register(Chapter)
 class chapterAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Article)
+class articleAdmin(admin.ModelAdmin):
     pass
