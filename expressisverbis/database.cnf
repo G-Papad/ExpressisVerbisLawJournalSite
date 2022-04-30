@@ -1,0 +1,4 @@
+database = expressisVerbisDatabase
+user = expressisVerbis
+password = avocados
+default-character-set = utf8
