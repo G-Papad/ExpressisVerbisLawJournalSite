@@ -7,6 +7,7 @@ from django.conf import settings
 urlpatterns = [
     path('main/', views.mainpage, name='mainpage'),
     path('issues/', views.issues, name='issues'),
+    path('issues/6/', views.latest_issue, name='latest_issue'),
     path('issues/<str:issnr>/', views.issues_pdf, name='issues_pdf'),
     path('members/', views.members, name='members'),
     path('contact/', views.contact, name='contact'),

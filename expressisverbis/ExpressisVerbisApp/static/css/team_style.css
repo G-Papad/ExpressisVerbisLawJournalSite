@@ -18,6 +18,10 @@
     justify-content: flex-start;
 }
 
+.team-general-text{
+  text-align: justify;
+}
+
 @media (max-width:900px) {
     .team-member{
         flex-direction: column;
@@ -26,6 +30,6 @@
         padding: 0;
     }
     .team-general-text{
-        padding:0.5em;
+        padding:2em;
     }
 }

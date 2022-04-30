@@ -54,3 +54,25 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.email
+
+
+# class latest_issue(models.Model):
+#     issue_number = models.IntegerField(unique=True)
+#     cover = models.ImageField(upload_to='covers/', default=None)
+#     startDate = models.IntegerField()
+#     publicationDate = models.IntegerField()
+#     context = models.TextField(blank=True)
+#
+#     def __str__(self):
+#         return "Issue Nr" + str(self.issueNumber)
+
+class Chapter(models.Model):
+    name = models.CharField(max_length=255, default=None)
+    def __str__(self):
+        return self.name
+
+class Article(models.Model):
+    category = models.ForeignKey(Chapter, on_delete=models.CASCADE, default="")
+    title = models.CharField(max_length=500, default=None)
+    editor = models.CharField(max_length=255, default=None, blank=True)
+    file = models.FileField(upload_to='chapter/')

@@ -1,0 +1,60 @@
+.chapter_main_container {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.chapter-list{
+  list-style-type: disclosure-closed;
+}
+.chapters_tag{
+  justify-content: flex-start;
+  /* color: var(--exp-blue); */
+  text-decoration: underline;
+}
+
+.announcement-title{
+  font-size: 18px;
+}
+
+.announcement-title:hover{
+  color:var(--exp-blue);
+}
+
+.announcement-text{
+  font-size: 16px;
+}
+
+.chapter_name{
+  color: var(--exp-blue);
+  cursor: pointer;
+}
+.chapter_name:hover{
+  color: var(--exp-bez);
+}
+.hidden{
+  display: none;
+}
+
+.articles-container{
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    opacity: 0;
+}
+
+.animated{
+  height: auto;
+  opacity: 1;
+}
+
+.li-open{
+  list-style-type: disclosure-open;
+}
+
+
+/* .cover-photo{
+  position: absolute;
+} */
